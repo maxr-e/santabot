@@ -1,0 +1,52 @@
+#main { 
+	background-color: lightgrey;
+    position: fixed; 
+	width: 60%;
+    top: 10%; 
+    right: 200px; 
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+#input {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+#messages {
+	display: flex;
+	flex-direction: column;
+	overflow:auto;
+	height: 90%;
+	max-height: 20rem;
+	background-color: white;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+#moose-pic {
+	height: 7rem;
+	width: auto;
+	margin: 10px;
+}
+
+.bot-response {
+ 	text-align: right;
+}
+
+.user-response {
+	text-align: left;
+}
+
+.header {
+	font-size: 30px;
+	background-color: darkgreen;
+	color: rgb(172, 0, 0);
+	padding: 30px;
+	margin: 30px;
+	border-radius: 10px;
+	width: 90%;
+	text-align: center;
+}
