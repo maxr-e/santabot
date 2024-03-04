@@ -3,7 +3,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-I wanted to create a simple chatbot so my kids could be judged by a souless digital elf and be reduced to objects in one of two arrays, "Naughty" or "Nice". This project is a fun way for me to work on my vanilla JavaScript abilities while including my kids. So far, I have learned about basic bot logic and reviewed DOM manipulation.
+I wanted to create a simple chatbot so my kids could be judged by a soulless digital elf and be reduced to objects in one of two arrays, "Naughty" or "Nice". This project is a fun way for me to work on my vanilla JavaScript abilities while including my kids. So far, I have learned about basic bot logic and reviewed DOM manipulation.
 
 ## Table of Contents
   * [Installation](#installation)
