@@ -80,7 +80,7 @@ const utterances = [
       ["merry christmas and happy new year", "happy new year"],//8
       ["what are you doing", "what is going on", "what is up"],//9
       ["how old are you"],//10
-      ["who are you", "are you human", "are you bot", "are you human or bot"],//11
+      ["who are you", "are you human", "are you bot", "are you human or bot", "what are you", "whats your name"],//11
       ["i am bodhi", "my name is bodhi", "im bodhi", "bodhi"], //12
       ["i am gavin", "my name is gavin", "im gavin", "gavin"], //13
       ["i am evelyn", "my name is evelyn", "im evelyn", "evelyn"], //14
@@ -167,4 +167,34 @@ const alternatives = [
       "Try again.",
       "-BRRZT- DOES NOT COMPUTE -HO HO HO-.",
 ];
-    
+  
+// Dark mode toggle
+
+// const darkButton = document.getElementById("darkToggle")
+// darkButton.addEventListener("click", function(darkToggle) {
+//   function darkToggle() {
+//     var element = document.body;
+//     element.classList.toggle("dark-mode");
+//   }
+// });
+
+// Access toggle switch HTML element
+var darkToggle = document.querySelector("dark-toggle");
+var container = document.querySelector(".body");
+
+// Set default mode to dark
+var mode = "dark-mode";
+
+// Listen for a click event on toggle switch
+darkToggle.addEventListener("click", function() {
+  // If mode is dark, apply light background
+  if (mode === "dark-mode") {
+    mode = "light-mode";
+    container.setAttribute("class", "light-mode");
+  }
+  // If mode is light, apply dark background 
+  else {
+    mode = "dark-mode";
+    container.setAttribute("class", "dark-mode");
+  }
+});

@@ -1,9 +1,24 @@
+.light-mode {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	color: black;
+}
+
+.dark-mode {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(20, 20, 20);
+	color: whitesmoke
+}
+
 #main { 
 	background-color: lightgrey;
     position: fixed; 
 	width: 60%;
     top: 10%; 
-    right: 200px; 
 	margin-left: 2rem;
 	margin-right: 2rem;
 }
@@ -12,12 +27,14 @@
 	padding: 10px;
 	margin: 10px;
 	border-radius: 10px;
+	text-align: center;
+	/* TODO: make every other word green and red in the input box while user is typing. Will need Javascript */
 }
 
 #messages {
 	display: flex;
 	flex-direction: column;
-	overflow:auto;
+	overflow: auto;
 	height: 90%;
 	max-height: 20rem;
 	background-color: white;
@@ -34,10 +51,12 @@
 
 .bot-response {
  	text-align: right;
+	color: red;
 }
 
 .user-response {
 	text-align: left;
+	color: green;
 }
 
 .header {
