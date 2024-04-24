@@ -179,22 +179,22 @@ const alternatives = [
 // });
 
 // Access toggle switch HTML element
-var darkToggle = document.querySelector("dark-toggle");
-var container = document.querySelector(".body");
+var darkToggle = document.querySelector("#dark-toggle");
+var container = document.querySelector(".container");
 
-// Set default mode to dark
-var mode = "dark-mode";
+// Set default mode to light
+var mode = "light-mode";
 
 // Listen for a click event on toggle switch
 darkToggle.addEventListener("click", function() {
   // If mode is dark, apply light background
-  if (mode === "dark-mode") {
-    mode = "light-mode";
-    container.setAttribute("class", "light-mode");
+  if (mode === "light-mode") {
+    mode = "dark-mode";
+    container.setAttribute("class", "dark-mode");
   }
   // If mode is light, apply dark background 
   else {
-    mode = "dark-mode";
-    container.setAttribute("class", "dark-mode");
+    mode = "light-mode";
+    container.setAttribute("class", "light-mode");
   }
 });

@@ -4,6 +4,8 @@
 	align-items: center;
 	background-color: white;
 	color: black;
+	height: 100vh;
+
 }
 
 .dark-mode {
@@ -11,7 +13,22 @@
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(20, 20, 20);
-	color: whitesmoke
+	color: whitesmoke;
+	height: 100vh;
+}
+
+.dark-mode #main {
+	background-color: rgb(61, 119, 228, 1);
+}
+
+.dark-mode #input {
+	background-color: rgb(122, 10, 10);
+	color: rgb(246, 160, 160);
+}
+
+.dark-mode #messages {
+	background-color: rgb(122, 10, 10);
+	color: rgb(246, 160, 160);
 }
 
 #main { 
