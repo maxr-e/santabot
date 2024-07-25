@@ -16,7 +16,7 @@ function output(input) {
       .replace(/whats/g, "what is")
       .replace(/please /g, "")
       .replace(/ please/g, "");
-   
+   //TODO: create a way to accept gift requests by identifying "I want, I'd like etc." in the utterance and answering with a different array. Main concern is how to extract 'I want' and ignore the rest.
     if (compare(utterances, answers, text)) {
       product = compare(utterances, answers, text);
     } 
@@ -70,7 +70,9 @@ function addChatEntry(input, product) {
 
 const utterances = [ 
       ["how are you", "how is life", "how are things"],//0
-      ["hi", "hey", "hello", "hi santa", "hello santa", "santa", "santa claus", "saint nick", "saint nicholas", "father christmas", "hello santa bot 1000", "hi santa bot 1000", "hello santa bot", "hi santa bot"],//1
+      ["hi", "hey", "hello", "hi santa", "hello santa", "santa", 
+        "santa claus", "saint nick", "saint nicholas", "father christmas", 
+        "hello santa bot 1000", "hi santa bot 1000", "hello santa bot", "hi santa bot"],//1
       ["good morning"],//2
       ["good afternoon"],//3
       ["good evening", "good night"],//4
@@ -87,7 +89,12 @@ const utterances = [
       ["i am river", "my name is river", "im river", "river"], //15
       ["what is your favorite color", "whats your favorite color"], //16
       ["bye", "good bye", "bye bye", "see you later"], //17
-      ["i love you", "i love you santa", "i love you santa claus", "i love you saint nick", "i love you saint nicholas", "i love you father christmas", "i love you robot santa", "i love you santa bot", "i love you santabot", "i love you santabot 1000", "i love you santa bot 1000"],
+      ["i love you", "i love you santa", "i love you santa claus", 
+        "i love you saint nick", "i love you saint nicholas", 
+        "i love you father christmas", "i love you robot santa", 
+        "i love you santa bot", "i love you santabot", 
+        "i love you santabot 1000", "i love you santa bot 1000"], //18
+      ["i want a", "i want ", "i'd like a ", "i would like a", "i'd like", "i would like ", "can i have a ", "can i have "], //19
 ];
      
     
@@ -120,7 +127,10 @@ const answers = [
         "HO, why not?",
       ], //6
       [
-        "And a happy new year! HOHOHO!", "MERRY CHRISTMAS!", "OH-ho-ho, Merry Christmas!", "Bah...humbug!...Ho! Just pulling your leg, Merry Christmas!"
+        "And a happy new year! HOHOHO!", 
+        "MERRY CHRISTMAS!", 
+        "OH-ho-ho, Merry Christmas!", 
+        "Bah...humbug!...Ho! Just pulling your leg, Merry Christmas!"
       ], //7
       [
         "Hoho! Merrrrrry Christmas!",
@@ -135,7 +145,8 @@ const answers = [
         "Possibly 2024 years old, but more like over 3000 years old. Ho.",
       ], //10
       [
-        "I am Santa Bot 1000. And what is your name, my child?", "I am a robot Santa. What is your name, my dear?",
+        "I am Santa Bot 1000. And what is your name, my child?", 
+        "I am a robot Santa. What is your name, my dear?",
       ], //11
       [
         "Hello there, Bodhi! Ho ho!",
@@ -153,11 +164,17 @@ const answers = [
         "Why, red... no, green... well I AM partial to candy cane, does that count? Ho ho!",
       ], //16
       [
-        "Farewell, little one! Ho-ho-ho!", "Bye bye and a Merry Christmas to you!", "Merry Christmas, one and all! HOHOHO.", "MERRY CHRISTMAS! Oh-ho!", "Hohoho, talk to you again soon!",
+        "Farewell, little one! Ho-ho-ho!", "Bye bye and a Merry Christmas to you!", 
+        "Merry Christmas, one and all! HOHOHO.", "MERRY CHRISTMAS! Oh-ho!", 
+        "Hohoho, talk to you again soon!",
       ], //17
       [
         "I love you too, little one. Ho ho!", "Hoho, and I love you!",
-      ] //18
+      ], //18
+      [
+        "Ho-ho, you want a WHAT? I'm going to have to talk to my elves about that.",
+        "I'll see what can be done, my child!"
+      ], //19
 ]; 
      
     
