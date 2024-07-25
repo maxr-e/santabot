@@ -8,6 +8,7 @@ const inputField = document.getElementById("input")
     }
 });
 
+// This method uses a static and limited array comparison. Consider implementing a RAG API? May be more effective with Python.
 function output(input) {
     let product;
     let text = input.toLowerCase().replace(/[^\w\s\d]/gi, ""); //Regex to standardize inputs
@@ -61,7 +62,7 @@ function addChatEntry(input, product) {
     botDiv.appendChild(botText);
     messagesContainer.appendChild(botDiv);
     
-    //After an intentional wait, display the bot response (product)
+    //After an intentional wait, display the bot response (product).
     setTimeout(() => {
       botText.innerText = `${product}`;
       messagesContainer.scrollTop = messagesContainer.scrollHeight; //makes the messages box scroll to the newest response automatically
@@ -186,15 +187,6 @@ const alternatives = [
 ];
   
 // Dark mode toggle
-
-// const darkButton = document.getElementById("darkToggle")
-// darkButton.addEventListener("click", function(darkToggle) {
-//   function darkToggle() {
-//     var element = document.body;
-//     element.classList.toggle("dark-mode");
-//   }
-// });
-
 // Access toggle switch HTML element
 var darkToggle = document.querySelector("#dark-toggle");
 var container = document.querySelector(".container");
@@ -204,14 +196,18 @@ var mode = "light-mode";
 
 // Listen for a click event on toggle switch
 darkToggle.addEventListener("click", function() {
-  // If mode is dark, apply light background
+  // If mode is dark, apply light background and change button text
   if (mode === "light-mode") {
     mode = "dark-mode";
     container.setAttribute("class", "dark-mode");
+    darkToggle.value = "Click for LIGHT MODE";
+    darkToggle.textContent = darkToggle.value;
   }
   // If mode is light, apply dark background 
   else {
     mode = "light-mode";
     container.setAttribute("class", "light-mode");
+    darkToggle.value = "Click for DARK MODE";
+    darkToggle.textContent = darkToggle.value;
   }
 });
