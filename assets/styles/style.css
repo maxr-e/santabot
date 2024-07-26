@@ -31,6 +31,13 @@
 	color: rgb(246, 160, 160);
 }
 
+.btTxt {
+	position: absolute;
+	left: 10px;
+	top: 40px;
+	width: 10%;
+}
+
 #main { 
 	background-color: lightgrey;
     position: fixed; 
